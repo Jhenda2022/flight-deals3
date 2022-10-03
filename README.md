@@ -1,5 +1,5 @@
 # flight-deals3
-I replicated Angela Yu's flight deals exercise, a capstone project that uses environment variables, API, requests library, object oriented programming, 
+Third attempt at replicating Angela Yu's flight deals exercise, a capstone project that uses environment variables, API, requests library, object oriented programming,
 datetime module, and telegram bot. First, a get request was made to fetch data of lowest prices from google sheet. Second, a get request was sent to Tequila 
 to fetch city codes using locations API. Third, a put request was performed to populate iATA codes of cities in the google sheet. Fourth, datetime module and 
 time delta was used to determine date for for tomorrow and for the next six months. Fifth, another get request was sent to Tequila using search API to 
