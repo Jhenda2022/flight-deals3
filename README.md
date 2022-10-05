@@ -8,7 +8,7 @@ fetch flight data from tomorrow up to six months from origin city to destination
 in the google sheet, an alert will be sent to telegram using telegram bot. Note that environment variables were used to hide sensitive data.
 
 2nd Commit:
-Stopovers/layover and booking links were determined from the data generated from Tequila. Used cutt.ly API to shorten the generated link. 
+Stopovers/layovers and booking links were determined from the data generated from Tequila. Used cutt.ly API to shorten the generated link. 
 Used smtplib instead of telegram bot to send alert via email. 
 
 3rd commit:
