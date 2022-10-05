@@ -27,7 +27,14 @@ for destination in sheet_data:
         date_to=six_months
     )
     if flight.price < destination["lowestPrice"]:
-        nf.telegram_bot_sendtext(
-            bot_message=f"Low price alert! Only ${flight.price} to fly from {flight.origin_city}-{flight.origin_airport}"
-                        f" to {flight.destination_city}-{flight.desination_airport} from {flight.date_from} to {flight.date_to}"
-        )
+        message = f"Only ${flight.price} to fly from " \
+                  f"{flight.origin_city}-{flight.origin_airport} to " \
+                  f"{flight.destination_city}-{flight.destination_airport} from " \
+                  f"{flight.date_from} to {flight.date_to}."
+        if flight.stop_overs > 0:
+            message += f"\nFlight has {flight.stop_overs} stopover, via {flight.via_city}."
+
+        deep_link = flight.url_shortener(flight.link)
+        message += f"\n{deep_link}"
+
+        nf.send_emails(message=message)
