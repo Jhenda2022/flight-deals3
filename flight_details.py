@@ -24,5 +24,4 @@ class FlightDetails:
         url = urllib.parse.quote(link)
         response = requests.get('http://cutt.ly/api/api.php?key={}&short={}'.format(key, url))
         short_url = response.json()["url"]["shortLink"]
-        print(short_url)
         return short_url
