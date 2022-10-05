@@ -10,3 +10,6 @@ in the google sheet, an alert will be sent to telegram using telegram bot. Note 
 2nd Commit:
 Stopovers/layover and booking links were determined from the data generated from Tequila. Used cutt.ly API to shorten the generated link. 
 Used smtplib instead of telegram bot to send alert via email. 
+
+3rd commit:
+Removed print function in flight_details.py for a cleaner project.
